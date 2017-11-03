@@ -1,0 +1,343 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Event.js"></script>
+<script type="text/javascript" src="js/Magnifier.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="css/magnifier.css">
+
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-tabs">
+   <li><a href="#a" data-toggle="tab">Product</a></li>
+   <li><a href="#b" data-toggle="tab">User Information</a></li>
+   <li><a href="#c" data-toggle="tab">Payment</a></li>
+   <li><a href="#d" data-toggle="tab">Verify and Submit</a></li>
+</ul>
+
+<div class="tab-content">
+   <div class="tab-pane active" id="a">
+		<div class="row">
+		
+		  <div class="col-xs-10">
+		 	 
+		  
+		  
+		  
+			  <div class="form-group">
+						<h3 id="customize_order">Customize your Order</h3>
+						<div class="form-group">
+							<label for="InputName">Quantity</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Quantity" required>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="InputName">Color</label>
+							<div class="input-group">
+								<select class="form-control">
+									<option>Select Color</option>
+									<option>Red</option>
+								</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Add numbers?</label>
+							<div class="radio-inline">
+								<label>
+									<input name="gender" type="radio" required>Yes
+								</label>
+							</div>
+							<div class="radio-inline">
+								<label>
+								<input name="gender" type="radio" required>No
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="InputName">Middle Center Back</label>
+							<div class="input-group">
+								<select class="form-control">
+									<option>Select Color</option>
+									<option>Red</option>
+								</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="InputName">Upper Left Front</label>
+							<div class="input-group">
+								<select class="form-control">
+									<option>Select Color</option>
+									<option>Red</option>
+								</select>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+				</div>
+			
+				<div class="form-group">
+					<h3>Roster</h3>
+					<div class="form-inline col-xs-12">
+						<div class="form-group col-xs-4">
+							<label for="InputName">Name</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Name" required>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+						<div class="form-group col-xs-4">
+							<label for="InputName">Size</label>
+							<div class="input-group">
+							<select class="form-control">
+								<option>Select Size</option>
+								<option>XS</option>
+								<option>S</option>
+								<option>M</option>
+								<option>L</option>
+								<option>XL</option>
+								<option>XXL</option>
+							</select>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+						</div>
+						<div class="form-group col-xs-4">
+							<label for="InputName">Number</label>
+							<div class="input-group">
+								<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Number" required>
+								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<br />
+				<div class="form-group col-xs-8">
+					<div class="form-inline col-xs-3">
+						<label>Have questions?</label>
+						<button class="btn btn-primary">Chat with Us</button>
+						<button class="btn btn-primary">Call Us</button>
+					</div>
+				
+					<div class="form-inline col-xs-3">
+						<label>Accessibility</label>
+						<button class="btn btn-primary">Voice Assist</button>
+						<button class="btn btn-primary">Zoom In/Out</button>
+					</div>
+				</div>
+			
+				<br />
+				<br />
+				<br />
+				<div class="form-group pull-right">
+					<a href="#b" data-toggle="tab" class="btn btn-default">Next</a>
+				</div>		
+		
+			</div>
+		
+		<div class="col-xs-1">
+		
+		<div>
+			<a class="magnifier-thumb-wrapper" href="http://en.wikipedia.org/wiki/File:Starry_Night_Over_the_Rhone.jpg">
+				<img id="thumb" name="thumb" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/200px-Starry_Night_Over_the_Rhone.jpg"
+				data-large-img-url="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/400px-Starry_Night_Over_the_Rhone.jpg"
+				data-large-img-wrapper="preview">
+			</a>
+		</div>
+	
+		<div class="magnifier-preview" id="preview" style="width: 300px; height: 133px;  position: absolute; top: 50%;left: 50%; margin-left: -500px;margin-top:  -50px" ></div>
+		
+		</div>
+		
+	</div>
+
+   </div>
+   <div class="tab-pane" id="b">
+		<div class="row">
+			<div class="form-group">
+				<label for="InputName">First Name</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="First Name" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Middle Name</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Middle Name" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Last Name</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Last Name" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<h5>Shipping Information</h5>
+				<div class="form-group">
+					<label for="InputName">Address</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Address" required>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="InputName">City</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="InputName" id="InputName" placeholder="City" required>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="InputName">Zip Code</label>
+					<div class="input-group">
+						<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Zip Code" required>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Contact Number</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Contact Number" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputEmail">Email Address</label>
+				<div class="input-group">
+					<input type="email" class="form-control" id="InputEmailFirst" name="InputEmail" placeholder="Enter Email Address" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div class="form-group col-xs-6">
+			<div class="form-inline col-xs-3">
+				<label>Have questions?</label>
+				<button class="btn btn-primary">Chat with Us</button>
+				<button class="btn btn-primary">Call Us</button>
+			</div>
+		
+			<div class="form-inline col-xs-3">
+				<label>Accessibility</label>
+				<button class="btn btn-primary">Voice Assist</button>
+				<button class="btn btn-primary">Zoom In/Out</button>
+			</div>
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		<div class="form-inline pull-right">
+			<a href="#a" data-toggle="tab" class="btn btn-default">Back</a>
+			<a href="#c" data-toggle="tab" class="btn btn-default">Next</a>
+		</div>
+   </div>
+   <div class="tab-pane" id="c">
+		<div class="row">
+			<div class="form-group">
+				<label for="InputName">Name on Card</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Name on Card" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Card Number</label>
+				<div class="input-group">
+					<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Card Number" required>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Month</label>
+				<div class="input-group">
+					<select class="form-control">
+						<option>Select Month</option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+					</select>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="InputName">Year</label>
+				<div class="input-group">
+					<select class="form-control">
+						<option>Select Year</option>
+						<option>2020</option>
+						<option>2021</option>
+						<option>2022</option>
+						<option>2023</option>
+						<option>2024</option>
+						<option>2025</option>
+						<option>2026</option>
+					</select>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div class="form-group col-xs-6">
+			<div class="form-inline col-xs-3">
+				<label>Have questions?</label>
+				<button class="btn btn-primary">Chat with Us</button>
+				<button class="btn btn-primary">Call Us</button>
+			</div>
+		
+			<div class="form-inline col-xs-3">
+				<label>Accessibility</label>
+				<button class="btn btn-primary">Voice Assist</button>
+				<button class="btn btn-primary">Zoom In/Out</button>
+			</div>
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		<div class="form-inline pull-right">
+			<a href="#b" data-toggle="tab" class="btn btn-default">Back</a>
+			<a href="#d" data-toggle="tab" class="btn btn-default">Next</a>
+		</div>
+   </div>
+   <div class="tab-pane" id="d">DDD</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var evt = new Event(),
+    m = new Magnifier(evt);	
+	
+	m.attach({
+    thumb: '#thumb',
+    large: 'http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Starry_Night_Over_the_Rhone.jpg/400px-Starry_Night_Over_the_Rhone.jpg',
+    largeWrapper: 'preview'
+});
+$(document).ready(function(){
+ 
+    $('#customize_order').hover(function() {		 
+      responsiveVoice.speak("Customize your Order");
+    }, function() {
+      responsiveVoice.speak("Customize your Order");
+    });  
+});
+</script>
+</body>
+</html>
