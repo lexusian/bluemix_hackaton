@@ -1,13 +1,14 @@
 <html>
 <head>
-<script type="text/javascript" src="js/jquery-2.1.3.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
 <script type="text/javascript" src="js/Event.js"></script>
 <script type="text/javascript" src="js/Magnifier.js"></script>
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet"/>
 <link rel="stylesheet" type="text/css" href="css/magnifier.css">
-
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -22,20 +23,42 @@
    <div class="tab-pane active" id="a">
 		<div class="row">
 		
-		  <div class="col-xs-10">
-		 	 
-		  
+		  <div class="col-xs-11 pull-left" style="width:70%;">
+		 	  
 		  
 		  
 			  <div class="form-group">
 						<h3 id="customize_order">Customize your Order</h3>
+                  
 						<div class="form-group">
-							<label for="InputName">Quantity</label>
+							<label for="Quantity">Quantity</label>                            
+                            
+                            
 							<div class="input-group">
-								<input type="text" class="form-control" name="InputName" id="InputName" placeholder="Quantity" required>
-								<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-							</div>
+                                
+                                
+								<input type="text" class="form-control" name="Quantity" id="Quantity" placeholder="Quantity" required>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span>
+                                
+                                <a id='quantity_field' href="javascript: void(0)">
+                                 
+                                    <span style="font-size:1.5em; color:black;"  class="glyphicon glyphicon-volume-up"></span>                               
+                                </a>
+                                
+                                <a id='quantity_field_zoom' href="javascript: void(0)">
+                                 
+                                    <span id='quality_zoom_icon' style="font-size:1.5em; color:black;"  class="glyphicon glyphicon-zoom-in"></span>                               
+                                </a>
+                                </span>                 
+                                
+                                 
+
+                            </div>
+                            
+                          
 						</div>
+                  
+                  
 						<div class="form-group">
 							<label for="InputName">Color</label>
 							<div class="input-group">
@@ -115,33 +138,15 @@
 						</div>
 					</div>
 				</div>
-				<br />
-				<br />
-				<br />
-				<div class="form-group col-xs-8">
-					<div class="form-inline col-xs-3">
-						<label>Have questions?</label>
-						<button class="btn btn-primary">Chat with Us</button>
-						<button class="btn btn-primary">Call Us</button>
-					</div>
-				
-					<div class="form-inline col-xs-3">
-						<label>Accessibility</label>
-						<button class="btn btn-primary">Voice Assist</button>
-						<button class="btn btn-primary">Zoom In/Out</button>
-					</div>
-				</div>
-			
-				<br />
-				<br />
-				<br />
+				<br />	<br />	<br />
+              
 				<div class="form-group pull-right">
 					<a href="#b" data-toggle="tab" class="btn btn-default">Next</a>
 				</div>		
 		
 			</div>
 		
-		<div class="col-xs-1">
+		<div class="pull-right" >
 		
 		<div>
 			<a class="magnifier-thumb-wrapper" href="http://en.wikipedia.org/wiki/File:Starry_Night_Over_the_Rhone.jpg">
@@ -151,7 +156,7 @@
 			</a>
 		</div>
 	
-		<div class="magnifier-preview" id="preview" style="width: 300px; height: 133px;  position: absolute; top: 50%;left: 50%; margin-left: -500px;margin-top:  -50px" ></div>
+		<div class="magnifier-preview" id="preview" style="width: 300px; height: 133px;  position: absolute; top: 50%;left: 50%; margin-left: -60px;margin-top:  -150px" ></div>
 		
 		</div>
 		
@@ -303,8 +308,10 @@
 			</div>
 		
 			<div class="form-inline col-xs-3">
-				<label>Accessibility</label>
-				<button class="btn btn-primary">Voice Assist</button>
+				<label>Accessibility</label>				
+                <button type="button" class="btn btn-primary" data-toggle="button">
+    Voice Assistsds
+</button>
 				<button class="btn btn-primary">Zoom In/Out</button>
 			</div>
 		</div>
@@ -319,9 +326,30 @@
    </div>
    <div class="tab-pane" id="d">DDD</div>
 </div>
+    <div class="row">
+    	<div class="form-group col-xs-9">
+					<div class="form-inline col-xs-4">
+						<label>Have questions?</label>
+                        <div class="row">
+						<button class="btn btn-primary">Chat with Us</button>
+						<button class="btn btn-primary">Call Us</button>
+                        </div>
+					</div>
+				
+					<div class="form-inline col-xs-8">
+						<label>Accessibility</label>
+                            <div class="row">
+                                Voice Assist?&nbsp;<input id='voice' data-toggle="toggle" type="checkbox"></input>
+                                 Zoom?&nbsp;<input id='zoom' data-toggle="toggle" type="checkbox"></input>                                   
+                            </div>
+					</div>
+				</div>
+    </div>
 </div>
-
+<script src="js/zoom.js"></script> 
 <script type="text/javascript">
+    var zoomin=false;
+    
 var evt = new Event(),
     m = new Magnifier(evt);	
 	
@@ -332,10 +360,84 @@ var evt = new Event(),
 });
 $(document).ready(function(){
  
+    //hide all icons    
+    $('#quantity_field').hide();
+    $('#quantity_field_zoom').hide();
+    
+    $('#quantity_field').click(
+     function() {		 
+        
+        //$('#InputName').zoomTo({targetsize:.77, duration:600});        
+        responsiveVoice.speak("Specify the quantity.");
+     });
+    
+    
+    $('#quantity_field_zoom').click(
+     function() {		 
+        
+        //$('#InputName').zoomTo({targetsize:.77, duration:600});        
+        //responsiveVoice.speak("Specify the quantity.");
+         zoom.to({
+            element: document.getElementById( 'Quantity' )
+        });
+         
+         if(zoomin){
+             $('#quality_zoom_icon').removeClass("glyphicon glyphicon-zoom-out").addClass("glyphicon glyphicon-zoom-in");
+             
+         }
+         else{
+             
+        
+             $('#quality_zoom_icon').removeClass("glyphicon glyphicon-zoom-in").addClass("glyphicon glyphicon-zoom-out");
+         }
+             
+         
+         
+         
+         zoomin=!zoomin;
+         //else
+           //zoom.out;  
+         
+     });
+    
+    
+    
+    
+    $('#zoom').change(function() {		 
+        var value=$('#zoom').prop('checked');        
+        //var value=$('voice').val();        
+        if(value){            
+               
+            $('#quantity_field_zoom').show();
+            
+        }
+        else{
+            
+            $('#quantity_field_zoom').hide();
+        }
+        
+    });  
+    
+    $('#voice').change(function() {		 
+        
+        var value=$('#voice').prop('checked');        
+        //var value=$('voice').val();        
+        if(value){
+            $('#quantity_field').show();
+        }
+        else{
+            $('#quantity_field').hide();
+        }
+        
+    });  
+    
     $('#customize_order').hover(function() {		 
-      responsiveVoice.speak("Customize your Order");
-    }, function() {
-      responsiveVoice.speak("Customize your Order");
+        var value=$('#voice').prop('checked');        
+        //var value=$('voice').val();        
+        if(value)
+        responsiveVoice.speak("Please. Customize your order");
+        
+    }, function() {      
     });  
 });
 </script>
